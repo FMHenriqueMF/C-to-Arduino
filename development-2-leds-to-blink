@@ -1,0 +1,12 @@
+void setup () {
+		pinMode ( 4 , OUTPUT );     // 4 é a porta D4 da placa
+		pinMode ( 6 , OUTPUT );     // 6 é a porta D6 da placa
+		digitalWrite ( 4 , HIGH );      // Liga o Led que está conectado à porta D4
+	}
+	void loop () {
+		digitalWrite ( 6 , digitalRead ( 4 ) );    //Se o Boolean for verdadeiro, o Led ligará
+						           //Se o Boolean for falso, o Led desligará
+		digitalWrite ( 4 , !digitalRead ( 6 ) );   //Se o Boolean for verdaderio, o Led desligará
+						           //Se o Boolean for falso, o Led ligará
+		delay ( 1000 );                //Atrasará o próximo loop em 1 segundo
+	}
